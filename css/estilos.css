@@ -1,0 +1,102 @@
+/* Colores de la tienda: se cambian aquí y se aplican en todo el sitio */
+:root {
+  --turquesa: #0f7b85;
+  --turquesa-claro: #e3f6f7;
+  --rojo: #c62f36;
+  --texto: #29363a;
+  --blanco: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.5;
+  color: var(--texto);
+  background: var(--turquesa-claro);
+}
+
+a { color: var(--turquesa); }
+a:focus-visible { outline: 3px solid var(--rojo); outline-offset: 2px; }
+img { max-width: 100%; }
+
+.encabezado {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--blanco);
+  border-bottom: 4px solid var(--turquesa);
+}
+.marca { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.marca strong { display: block; font-size: 1.5rem; }
+.marca small { color: var(--texto); }
+
+.menu { display: flex; flex-wrap: wrap; gap: 6px; }
+.menu a { padding: 8px 12px; border-radius: 20px; text-decoration: none; font-weight: 600; }
+.menu a:hover { background: var(--turquesa-claro); }
+.menu a[aria-current="page"] { background: var(--turquesa); color: var(--blanco); }
+
+main { max-width: 1040px; margin: 0 auto; padding: 24px 16px 40px; }
+h1 { margin: 0 0 8px; color: var(--turquesa); line-height: 1.2; }
+.intro { margin-top: 0; }
+
+.portada { padding: 32px 20px; text-align: center; background: var(--blanco); border-radius: 16px; }
+
+.boton {
+  display: inline-block;
+  margin: 4px;
+  padding: 10px 18px;
+  border: 2px solid var(--rojo);
+  border-radius: 24px;
+  background: var(--rojo);
+  color: var(--blanco);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+.boton.secundario { background: var(--blanco); border-color: var(--turquesa); color: var(--turquesa); }
+
+.rejilla { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px; }
+
+.categoria, .producto { background: var(--blanco); border-radius: 14px; padding: 16px; }
+.categoria { display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none; color: var(--texto); }
+.categoria span { font-size: 3rem; }
+.categoria strong { font-size: 1.25rem; color: var(--turquesa); }
+.categoria:hover { outline: 3px solid var(--turquesa); }
+
+.producto { display: flex; flex-direction: column; text-align: center; }
+.producto img, .sin-foto { width: 100%; height: 170px; object-fit: contain; border-radius: 10px; }
+.producto img { background: #88dbd8; }
+.sin-foto { display: flex; align-items: center; justify-content: center; background: var(--turquesa-claro); color: var(--turquesa); }
+.producto h2 { margin: 12px 0 0; font-size: 1.15rem; }
+.producto p { margin: 4px 0; }
+.etiqueta { align-self: center; padding: 2px 10px; border-radius: 10px; background: #fff3cd; color: #6b5200; font-size: 0.8rem; }
+.producto dl { display: grid; grid-template-columns: max-content max-content; justify-content: center; gap: 2px 10px; margin: 8px 0 12px; }
+.producto dt, .datos dt { font-weight: 700; }
+.producto dd, .datos dd { margin: 0; }
+.producto .boton:first-of-type { margin-top: auto; }
+
+.pasos li { margin-bottom: 8px; }
+.privacidad { font-size: 0.9rem; }
+.formulario { width: 100%; height: 1000px; border: 0; border-radius: 14px; background: var(--blanco); }
+.aviso { padding: 20px; background: var(--blanco); border-left: 6px solid var(--rojo); border-radius: 10px; }
+
+.ficha { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; padding: 20px; background: var(--blanco); border-radius: 14px; }
+.ficha div { flex: 1 1 260px; }
+
+.datos { display: grid; grid-template-columns: max-content 1fr; gap: 8px 20px; padding: 20px; background: var(--blanco); border-radius: 14px; }
+
+.pie { padding: 20px 16px; text-align: center; background: var(--turquesa); color: var(--blanco); }
+.pie a { color: var(--blanco); }
+
+.producto img.cuadrada { background: var(--blanco); }
+.producto del { margin-left: 6px; color: #6b7478; }
+.subtitulo { margin-top: 32px; color: var(--turquesa); }
+
+.submenu { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.submenu a { padding: 6px 14px; border: 2px solid var(--turquesa); border-radius: 20px; background: var(--blanco); font-weight: 600; text-decoration: none; }
+.producto img.cuadrada { height: 280px; }
